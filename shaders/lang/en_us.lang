@@ -1,0 +1,77 @@
+option.SHADOW_MAP_RESOLUTION=Shadow Map Resolution
+option.comment.SHADOW_MAP_RESOLUTION=How sharp ur shadow is. high values are sharp but not easy on ur GPU
+
+option.PCF_RADIUS=Shadow Softness Radius
+option.comment.PCF_RADIUS=How thick the blur is
+
+option.PCF_SPREAD=Shadow Softness Spread
+option.comment.PCF_SPREAD=How far the blur spreads
+
+option.COLORED_SHADOW_SATURATION=Colored Shadow Vividness
+option.comment.COLORED_SHADOW_SATURATION=How colorful colored shadows look
+
+option.BLOOM_THRESHOLD=Bloom Threshold
+option.comment.BLOOM_THRESHOLD=How bright an object needs to be for it to have a nice glowing halo around it :3 (called bloom)
+
+option.BLOOM_INTENSITY=Bloom Intensity
+option.comment.BLOOM_INTENSITY=How strong the bloom is
+
+option.BLOOM_BLUR_RADIUS_X=Bloom Horizontal Spread
+option.comment.BLOOM_BLUR_RADIUS_X=How spread the bloom is horizontally, can be used for a camera smear effect
+
+option.BLOOM_BLUR_RADIUS_Y=Bloom Vertical Spread
+option.comment.BLOOM_BLUR_RADIUS_Y=How spread the bloom is horizontally, can be used for a camera smear effect
+
+option.BLOOM_DISTANCE_FADE_START=Bloom Fade Start Distance
+option.comment.BLOOM_DISTANCE_FADE_START=How far will bloom begin fading on well, far objects
+
+option.BLOOM_DISTANCE_FADE_END=Bloom Fade End Distance
+option.comment.BLOOM_DISTANCE_FADE_END=How far will bloom cease to exist
+
+option.GODRAY_INTENSITY=Godray Intensity
+option.comment.GODRAY_INTENSITY=How bright those cool rays from god are :O (called godrays)
+
+option.GODRAY_SAMPLES=Godray Sample Count
+option.comment.GODRAY_SAMPLES=How many samples are used to create the godrays, medium performance impact
+
+option.GODRAY_DECAY=Godray Decay
+option.comment.GODRAY_DECAY=How quickly god rays fade along their length
+
+option.GODRAY_DENSITY=Godray Density
+option.comment.GODRAY_DENSITY=How dense the godrays are
+
+option.OUTLINE_STRENGTH=Outline Strength
+option.comment.OUTLINE_STRENGTH=How strong the block outlines are
+
+option.OUTLINE_BRIGHTNESS=Outline Brightness
+option.comment.OUTLINE_BRIGHTNESS=How bright the block outlines are
+
+option.OUTLINE_BASE_THICKNESS=Outline Thickness
+option.comment.OUTLINE_BASE_THICKNESS=How thick the outlines are (in px btw)
+
+option.EXPOSURE_SUNRISE=Sunrise Brightness
+option.comment.EXPOSURE_SUNRISE=How bright sunrise is
+
+option.EXPOSURE_NOON=Noon Brightness
+option.comment.EXPOSURE_NOON=How bright afternoon is
+
+option.EXPOSURE_SUNSET=Sunset Brightness
+option.comment.EXPOSURE_SUNSET=How bright sunset is
+
+option.EXPOSURE_MIDNIGHT=Midnight Brightness
+option.comment.EXPOSURE_MIDNIGHT=How bright night is
+
+option.GRADE_SATURATION=Color Saturation
+option.comment.GRADE_SATURATION=How vivid ur game looks
+
+option.GRADE_SHADOW_LIFT=Shadow Lift
+option.comment.GRADE_SHADOW_LIFT=How not-dark u want dark things to be
+
+option.GRADE_CONTRAST=Contrast
+option.comment.GRADE_CONTRAST=How contrasty ur game looks
+
+option.FOLIAGE_WAVE_STRENGTH=Foliage Wind Sway
+option.comment.FOLIAGE_WAVE_STRENGTH=How much leaves and grass sway in the wind
+
+option.WATER_WAVE_STRENGTH=Water Wave Strength
+option.comment.WATER_WAVE_STRENGTH=How obvious water surface waves look
