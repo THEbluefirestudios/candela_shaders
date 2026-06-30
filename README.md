@@ -1,4 +1,7 @@
+
 # Candela Shaders
+
+<img width="1920" height="1080" alt="2026-06-30_15 26 08" src="https://github.com/user-attachments/assets/acdeb14e-094d-4035-aea5-e2a5911691e2" />
 
 A cool shaderpack made by a 13yo with a trash pc, for the HackCraft event that runs better than Complimentary (I use a GTX 1060 6GB, btw, so i know what it is like to have a trash PC)
 
