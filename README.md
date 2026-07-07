@@ -19,7 +19,7 @@ A cool shaderpack made by a 13yo with a trash pc, for the HackCraft event that r
 ## Installation
 
 1. Requires [Iris Shaders](https://irisshaders.net/) for Minecraft (Fabric), obviously.
-2. Download the shaderpack on the [Github Releases Page](https://github.com/THEbluefirestudios/candela-shaders/releases)
+2. Download the shaderpack on the [Github Releases Page](https://github.com/THEbluefirestudios/candela_shaders/releases)
    OR on [Modrinth](https://modrinth.com/shader/candela-shaders)
 3. Drop the `.zip` file in your `.minecraft/shaderpacks/` directory.
 4. Select **Candela Shaders** from the Iris shader selection screen.
