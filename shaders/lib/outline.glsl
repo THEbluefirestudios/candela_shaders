@@ -1,29 +1,28 @@
-// this is slightly edited version of the outline.glsl lib in my favourite shader: super duper vannilla, i just added some depth scaling for the outlines, otherwise, credits to them!
+// ok, to avoid legal schemeckadoo (add that word to your dictionaries FAST), im rewrote outlines, by myself ;)
 
-float getOutline(in ivec2 iUv, in float depthOrigin){
-    float linearDepthOrigin = near / (1.0 - depthOrigin);
-    float depthScale = clamp(1.0 - linearDepthOrigin * 0.002, 0.2, 1.0);
-    ivec2 scaledOffset = max(ivec2(vec2(OUTLINE_PIXEL_SIZE) * depthScale), ivec2(1, 1));
-    ivec2 topRightCorner = iUv - scaledOffset;
-    ivec2 bottomLeftCorner = iUv + scaledOffset;
+float getOutline(in ivec2 iUv, in float depthOrigin) 
+{
+    float linearDepth = near / (1.0 - depthOrigin);
+    float scaleFactor = clamp(1.0 - linearDepth * 0.002, 0.2, 1.0);
+
+    ivec2 offset = max(ivec2(vec2(OUTLINE_PIXEL_SIZE) * scaleFactor), ivec2(1, 1));
 
     #if OUTLINES == 1
-        float depth0 = near / (1.0 - texelFetch(depthtex0, topRightCorner, 0).x);
-        float depth1 = near / (1.0 - texelFetch(depthtex0, bottomLeftCorner, 0).x);
-        float depth2 = near / (1.0 - texelFetch(depthtex0, ivec2(topRightCorner.x, bottomLeftCorner.y), 0).x);
-        float depth3 = near / (1.0 - texelFetch(depthtex0, ivec2(bottomLeftCorner.x, topRightCorner.y), 0).x);
-
-        float sumDepth = depth0 + depth1 + depth2 + depth3;
-
-        return saturate(sumDepth - (near * 4.0) / (1.0 - depthOrigin));
+        // High-precision near-plane edge check
+        float sampleNW = near / (1.0 - texelFetch(depthtex0, iUv + ivec2(-offset.x,  offset.y), 0).x);
+        float sampleSE = near / (1.0 - texelFetch(depthtex0, iUv + ivec2( offset.x, -offset.y), 0).x);
+        float sampleSW = near / (1.0 - texelFetch(depthtex0, iUv + ivec2(-offset.x, -offset.y), 0).x);
+        float sampleNE = near / (1.0 - texelFetch(depthtex0, iUv + ivec2( offset.x,  offset.y), 0).x);
+        
+        float totalDepthDifference = (sampleNW + sampleSE + sampleSW + sampleNE) - (4.0 * linearDepth);
+        return saturate(totalDepthDifference);
     #else
-        float depth0 = 64.0 / (1.0 - texelFetch(depthtex0, topRightCorner, 0).x);
-        float depth1 = 64.0 / (1.0 - texelFetch(depthtex0, bottomLeftCorner, 0).x);
-        float depth2 = 64.0 / (1.0 - texelFetch(depthtex0, ivec2(topRightCorner.x, bottomLeftCorner.y), 0).x);
-        float depth3 = 64.0 / (1.0 - texelFetch(depthtex0, ivec2(bottomLeftCorner.x, topRightCorner.y), 0).x);
-
-        float sumDepth = depth0 + depth1 + depth2 + depth3;
-
-        return saturate((1.0 - depthOrigin) * sumDepth - 256.0);
+        float sampleNW = 64.0 / (1.0 - texelFetch(depthtex0, iUv + ivec2(-offset.x,  offset.y), 0).x);
+        float sampleSE = 64.0 / (1.0 - texelFetch(depthtex0, iUv + ivec2( offset.x, -offset.y), 0).x);
+        float sampleSW = 64.0 / (1.0 - texelFetch(depthtex0, iUv + ivec2(-offset.x, -offset.y), 0).x);
+        float sampleNE = 64.0 / (1.0 - texelFetch(depthtex0, iUv + ivec2( offset.x,  offset.y), 0).x);
+        
+        float combinedSamples = sampleNW + sampleSE + sampleSW + sampleNE;
+        return saturate((1.0 - depthOrigin) * combinedSamples - 256.0);
     #endif
 }
