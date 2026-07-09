@@ -9,9 +9,12 @@ uniform float viewWidth;
 uniform float viewHeight;
 uniform float near;
 uniform float far;
+
 #include "/lib/common.glsl"
 #include "/lib/outline.glsl"
 #include "/lib/settings.glsl"
+#include "/lib/fxaa.glsl"
+
 in vec2 texcoord;
 layout(location = 0) out vec4 color;
 const vec3 underwaterTint = vec3(0.0, 0.3, 0.6);
