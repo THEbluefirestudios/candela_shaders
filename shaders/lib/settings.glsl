@@ -30,3 +30,6 @@
 
 #define FOLIAGE_WAVE_STRENGTH 0.015 // Leaf and grass sway strength. [0.0 0.008 0.015 0.025 0.04]
 #define WATER_WAVE_STRENGTH 0.05 // Water surface wave strength. [0.0 0.025 0.05 0.08 0.12]
+
+
+#define ANTIALIASING 1 // Smooth out jagged pixel edges. 0 = Off, 1 = FXAA Fast Mode. [0 1]
