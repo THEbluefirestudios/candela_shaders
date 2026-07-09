@@ -42,4 +42,4 @@ This is a rather performant shader having better FPS with reasonable settings th
 
 *Built for HackCraft by BlueFireStudios.*
 
-*AI was not used to build this project, or README.*
+*AI was not used to write this README, and minimal AI was used to build this shader*
