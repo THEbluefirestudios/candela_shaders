@@ -75,3 +75,9 @@ option.comment.FOLIAGE_WAVE_STRENGTH=How much leaves and grass sway in the wind
 
 option.WATER_WAVE_STRENGTH=Water Wave Strength
 option.comment.WATER_WAVE_STRENGTH=How obvious water surface waves look
+
+option.ANTIALIASING=Anti-Aliasing
+option.comment.ANTIALIASING=Smooth out jagged pixel edges. FXAA is super light on ur GPU compared to TAA or MSAA
+
+value.ANTIALIASING.0=Off
+value.ANTIALIASING.1=FXAA
