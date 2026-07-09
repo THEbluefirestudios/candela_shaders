@@ -18,6 +18,7 @@ uniform int worldTime;
 #include "/lib/common.glsl"
 #include "/lib/outline.glsl"
 #include "/lib/settings.glsl"
+#include "/lib/fxaa.glsl"
 
 in vec2 texcoord;
 
@@ -41,7 +42,9 @@ vec3 myColorGrade(vec3 col) {
 }
 
 void main() {
-	color = texture(colortex0, texcoord);
+	vec2 texelSize = 1.0 / vec2(viewWidth, viewHeight);
+
+	color = vec4(applyFXAA(colortex0, texcoord, texelSize), 1.0);
 
 	if (isEyeInWater == 1) {
 		color.rgb = mix(color.rgb, underwaterTint * color.rgb, underwaterTintStrength);
