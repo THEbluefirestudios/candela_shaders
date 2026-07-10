@@ -81,3 +81,16 @@ option.comment.ANTIALIASING=Smooth out jagged pixel edges. FXAA is super light o
 
 value.ANTIALIASING.0=Off
 value.ANTIALIASING.1=FXAA
+
+option.CLOUD_TRANSPARENCY=Cloud Transparency
+option.comment.CLOUD_TRANSPARENCY=Smooth out jagged pixel edges. FXAA is super light on ur GPU compared to TAA or MSAA
+
+value.CLOUD_TRANSPARENCY.0.0=Invisible
+value.CLOUD_TRANSPARENCY.0.25=Faint
+value.CLOUD_TRANSPARENCY.0.5=Semi-Transparent
+value.CLOUD_TRANSPARENCY.0.75=Minecraft-like
+value.CLOUD_TRANSPARENCY.0.9=Almost opaque
+value.CLOUD_TRANSPARENCY.1.0=Opaque
+
+option.SHADOW_DISTANCE=Shadow Distance
+option.comment.SHADOW_DISTANCEY=How far shadows extend from the player
