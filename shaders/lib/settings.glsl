@@ -34,4 +34,4 @@
 
 
 #define ANTIALIASING 1 // Smooth out jagged pixel edges. 0 = Off, 1 = FXAA Fast Mode. [0 1]
-#define CLOUD_TRANSPARENCY 0.9 // How transparent the clouds are, 0 is invisible, 1 is opaque #define CLOUD_TRANSPARENCY 0.9 // How opaque clouds are [0.0 0.25 0.5 0.75 0.9 1.0]
+#define CLOUD_TRANSPARENCY 0.9 // How transparent the clouds are, 0 is invisible, 1 is opaque. [0.0 0.25 0.5 0.75 0.9 1.0]
