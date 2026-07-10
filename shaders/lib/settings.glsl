@@ -2,6 +2,7 @@
 #define PCF_RADIUS 1 // Shadow edge softness sample radius. [0 1 2 3]
 #define PCF_SPREAD 0.75 // Shadow edge softness spread distance. [0.25 0.5 0.75 1.0 1.5 2.0]
 #define COLORED_SHADOW_SATURATION 1.8 // Vividness of colored/translucent shadows. [1.0 1.2 1.4 1.6 1.8 2.0 2.5 3.0]
+#define SHADOW_DISTANCE 128 // How far the shadows can be seen, lower for better performance [64 96 128 160 192]
 
 #define BLOOM_THRESHOLD 0.9 // Brightness needed before bloom kicks in. [0.5 0.6 0.7 0.8 0.9 1.0]
 #define BLOOM_INTENSITY 0.6 // Overall bloom strength. [0.0 0.2 0.4 0.6 1.0 1.5 2.0 3.0]
@@ -33,3 +34,4 @@
 
 
 #define ANTIALIASING 1 // Smooth out jagged pixel edges. 0 = Off, 1 = FXAA Fast Mode. [0 1]
+#define CLOUD_TRANSPARENCY 0.9 // How transparent the clouds are, 0 is invisible, 1 is opaque #define CLOUD_TRANSPARENCY 0.9 // How opaque clouds are [0.0 0.25 0.5 0.75 0.9 1.0]
