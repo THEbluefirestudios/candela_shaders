@@ -9,7 +9,7 @@ in vec4 glcolor;
 
 const int shadowMapResolution = SHADOW_MAP_RESOLUTION;
 
-const float shadowDistance = 72.0;
+const float shadowDistance = SHADOW_DISTANCE;
 
 layout(location = 0) out vec4 color;
 
