@@ -1,9 +1,9 @@
 #if ANTIALIASING == 1
 
 #define EDGE_THRESHOLD_MIN 0.01
-#define EDGE_THRESHOLD_MAX 0.1
+#define EDGE_THRESHOLD_MAX 1.1
 #define FXAA_ITERATIONS 12u
-#define SUBPIXEL_QUALITY 1.5
+#define SUBPIXEL_QUALITY 0.75
 
 const float fxaaQuality[12] = float[12](1.0, 1.0, 1.0, 1.0, 1.0, 1.5, 2.0, 2.0, 2.0, 2.0, 4.0, 8.0);
 
