@@ -4,6 +4,8 @@ uniform sampler2D gtexture;
 
 uniform float alphaTestRef = 0.1;
 
+#include "/lib/settings.glsl" 
+
 in vec2 lmcoord;
 in vec2 texcoord;
 in vec4 glcolor;
@@ -15,7 +17,8 @@ layout(location = 2) out vec4 encodedNormal;
 
 void main() {
 	color = texture(gtexture, texcoord) * glcolor;
-	lightLevelData = vec4(lmcoord, 0.0, 1.0);
+	color.a = CLOUD_TRANSPARENCY;
+	lightLevelData = vec4(lmcoord, 1.0, 1.0);
 	encodedNormal = vec4(0.5, 0.5, 1.0, 1.0);
 	if (color.a < alphaTestRef) {
 		discard;
